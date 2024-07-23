@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <h2 class="title">GALERY</h2>
+        <div class="galery">
+            <!-- THUMBNAIL -->
+            <img src="foto/thumb/batman.jpg" alt="" class="thumb">
+            <img src="foto/thumb/spiderman.jpg" alt="" class="thumb">
+            <img src="foto/thumb/superman.jpg" alt="" class="thumb">
+            <img src="foto/thumb/homelander.jpg" alt="" class="thumb">
+
+
+        </div>
+
+
+    </div>
+    <!-- FULL -->
+    <div class="full">
+        <img src="foto/full/batman.jpeg" alt="" class="">
+        <div class="kartuBiru"></div>
+    </div>
+    <div class="full">
+        <img src="foto/full/spiderman.jpeg" alt="" class="">
+        <div class="kartuMerah"></div>
+    </div>
+    <div class="full">
+        <img src="foto/full/superman.jpeg" alt="" class="">
+        <div class="kartuBiru"></div>
+    </div>
+    <div class="full">
+        <img src="foto/full/homelander.jpg" alt="" class="">
+        <div class="kartuMerah"></div>
+    </div>
+
+
+
+
+    <script>
+        let thumb = document.querySelectorAll(".thumb");
+        let full = document.querySelectorAll(".full");
+        let bg = document.querySelector(".bg");
+
+        thumb.forEach((anak, index) => {
+            anak.addEventListener("mouseover", () => {
+
+                full[index].classList.add('fullAdd');
+                bg.classList.add('bgAdd');
+
+            })
+
+            anak.addEventListener("mouseout", () => {
+
+                
+                full[index].classList.remove('fullAdd');
+                bg.classList.remove('bgAdd');
+
+            })
+        })
+    </script>
+</body>
+
+</html>
